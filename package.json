@@ -10,7 +10,7 @@
   "scripts": {
     "build": "gulp build"
   },
-  "author": "",
+  "author": "Ross M. Lodge",
   "license": "MIT",
   "devDependencies": {
     "ag-grid": "9.1.0",
