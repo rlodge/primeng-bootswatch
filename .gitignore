@@ -7,3 +7,5 @@ node_modules
 .yalc
 yalc.lock
 css/
+css-min/
+*.log

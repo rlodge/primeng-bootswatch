@@ -1,30 +1,8 @@
 var gulp = require('gulp');
 var sass = require('gulp-sass');
-var mocha = require('gulp-mocha');
-var sassdoc = require('sassdoc');
-var sassLint = require('gulp-sass-lint');
-
-var path = {
-  sass: {
-    src: './sass',
-    dest: './build/sass'
-  },
-  doc: {
-    src: './sass',
-    dest: './doc'
-  },
-  test: {
-    src: './test',
-    dest: './build/test'
-  }
-};
-
-gulp.task('default', function () {
-  var tasks = ['sass', 'lint'];
-  gulp.watch(path.sass.src + '/**/*.scss', tasks);
-});
-
-gulp.task('build', ['sass']);
+var cleanCSS = require('gulp-clean-css');
+var sourcemaps = require('gulp-sourcemaps');
+var runSequence = require('run-sequence');
 
 gulp.task('sass', function () {
   return gulp.src('./sass/**/*.scss')
@@ -32,23 +10,14 @@ gulp.task('sass', function () {
 	  .pipe(gulp.dest('./css'));
 });
 
-gulp.task('lint', function () {
-  return gulp.src(path.doc.src + '/**/*.scss')
-    .pipe(sassLint())
-    .pipe(sassLint.format())
-    .pipe(sassLint.failOnError())
+gulp.task('minify-css', function() {
+	return gulp.src('./css/**/*.css')
+		.pipe(sourcemaps.init())
+		.pipe(cleanCSS())
+		.pipe(sourcemaps.write())
+		.pipe(gulp.dest('./css-min'));
 });
 
-gulp.task('test', function () {
-  return gulp.src(path.test.src + '/test.js', { read: false })
-    .pipe(mocha());
-});
-
-gulp.task('doc', function () {
-  return gulp.src(path.doc.src + '/**/*.scss')
-    .pipe(sassdoc({
-      dest: path.doc.dest,
-      theme: 'markdown'
-    }));
-});
-
+gulp.task('build', runSequence('sass', 'minify-css', function() {
+	console.log('Finished');
+}));

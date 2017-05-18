@@ -97,7 +97,7 @@
   padding: 2px;
 }
 .ag-bootstrap .ag-rich-select-row-selected {
-  background-color: $dropdown-link-active-bg;
+  background-color: $component-active-bg;
 }
 .ag-bootstrap .ag-large-text {
   border: none;
@@ -194,7 +194,8 @@
   background-color: $table-bg;
 }
 .ag-bootstrap .ag-row-selected {
-  background-color: $brand-info;
+  background-color: $component-active-bg;
+  color: $component-active-color;
 }
 .ag-bootstrap .ag-floating-top .ag-row {
   background-color: $table-head-bg;

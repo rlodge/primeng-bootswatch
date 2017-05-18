@@ -1,28 +1,30 @@
 {
-  "name": "sass-corius",
-  "version": "0.1.2",
-  "description": "",
+  "name": "ag-grid-bootswatch",
+  "version": "1.0.0",
+  "description": "Bootswatch themes for ag-grid",
   "main": "gulpfile.js",
   "files": [
-    "css/"
+    "css/",
+    "css-min/"
   ],
   "scripts": {
-    "build": "gulp sass",
-    "test": "mocha tests/index.js"
+    "build": "gulp build"
   },
   "author": "",
   "license": "MIT",
   "devDependencies": {
-    "gulp": "^3.9.1",
-    "gulp-mocha": "^2.2.0",
-    "gulp-sass": "^2.2.0",
-    "gulp-sass-lint": "^1.1.1",
-    "sass-true": "^2.0.3",
-    "sassdoc": "^2.1.20",
-    "sassdoc-theme-markdown": "^2.0.2"
+    "ag-grid": "9.1.0",
+    "ag-grid-enterprise": "9.1.0",
+    "bootstrap": "4.0.0-alpha.6",
+    "gulp": "3.9.1",
+    "gulp-clean-css": "3.3.1",
+    "gulp-sass": "3.1.0",
+    "gulp-sourcemaps": "2.6.0",
+    "jquery": "2.3.1",
+    "run-sequence": "1.2.2",
+    "tether": "1.4.0"
   },
   "dependencies": {
-    "bootswatch": "4.0.0-alpha.6",
-    "sassdash": "^0.8.1"
+    "bootswatch": "4.0.0-alpha.6"
   }
 }
