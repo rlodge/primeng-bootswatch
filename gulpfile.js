@@ -24,7 +24,7 @@ gulp.task('default', function () {
   gulp.watch(path.sass.src + '/**/*.scss', tasks);
 });
 
-gulp.task('build', ['sass', 'lint', 'test', 'doc']);
+gulp.task('build', ['sass']);
 
 gulp.task('sass', function () {
   return gulp.src('./sass/**/*.scss')
