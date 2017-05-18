@@ -1,0 +1,19 @@
+@include test-module('Example') {
+
+  @include test('Example [function]') {
+    $test: example(foo);
+    $expect: foo;
+    @include assert-equal($test, $expect, 'Return the parameter');
+  }
+
+  @include test('Example [mixin]') {
+    @include assert('Output the parameter') {
+      @include input {
+        @include example(foo);
+      }
+      @include expect {
+        font-size: foo;
+      }
+    }
+  }
+}

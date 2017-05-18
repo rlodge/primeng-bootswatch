@@ -1,0 +1,25 @@
+{
+  "name": "sass-corius",
+  "version": "0.1.2",
+  "description": "",
+  "main": "gulpfile.js",
+  "scripts": {
+    "build": "gulp sass",
+    "test": "mocha tests/index.js"
+  },
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-mocha": "^2.2.0",
+    "gulp-sass": "^2.2.0",
+    "gulp-sass-lint": "^1.1.1",
+    "sass-true": "^2.0.3",
+    "sassdoc": "^2.1.20",
+    "sassdoc-theme-markdown": "^2.0.2"
+  },
+  "dependencies": {
+    "bootswatch": "4.0.0-alpha.6",
+    "sassdash": "^0.8.1"
+  }
+}
