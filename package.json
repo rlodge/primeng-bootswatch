@@ -3,6 +3,9 @@
   "version": "0.1.2",
   "description": "",
   "main": "gulpfile.js",
+  "files": [
+    "css/"
+  ],
   "scripts": {
     "build": "gulp sass",
     "test": "mocha tests/index.js"
