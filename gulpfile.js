@@ -3,6 +3,15 @@ var sass = require('gulp-sass');
 var cleanCSS = require('gulp-clean-css');
 var sourcemaps = require('gulp-sourcemaps');
 var runSequence = require('run-sequence');
+var del = require('del');
+var webserver = require('gulp-webserver');
+
+gulp.task('clean', function () {
+	return del([
+		'css/**/*',
+		'css-min/**/*'
+	]);
+});
 
 gulp.task('sass', function () {
   return gulp.src('./sass/**/*.scss')
@@ -18,6 +27,6 @@ gulp.task('minify-css', function() {
 		.pipe(gulp.dest('./css-min'));
 });
 
-gulp.task('build', runSequence('sass', 'minify-css', function() {
+gulp.task('build', runSequence('clean', 'sass', 'minify-css', function() {
 	console.log('Finished');
 }));

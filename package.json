@@ -1,7 +1,7 @@
 {
-  "name": "ag-grid-bootswatch",
+  "name": "primeng-bootswatch",
   "version": "1.0.0",
-  "description": "Bootswatch themes for ag-grid",
+  "description": "Bootswatch themes for primeng",
   "main": "gulpfile.js",
   "files": [
     "css/",
@@ -13,14 +13,15 @@
   "author": "Ross M. Lodge",
   "license": "MIT",
   "devDependencies": {
-    "ag-grid": "9.1.0",
-    "ag-grid-enterprise": "9.1.0",
     "bootstrap": "4.0.0-alpha.6",
+    "del": "2.2.2",
     "gulp": "3.9.1",
     "gulp-clean-css": "3.3.1",
     "gulp-sass": "3.1.0",
     "gulp-sourcemaps": "2.6.0",
+    "gulp-webserver": "^0.9.1",
     "jquery": "2.3.1",
+    "primeng": "4.0.1",
     "run-sequence": "1.2.2",
     "tether": "1.4.0"
   },

@@ -1,0 +1,56 @@
+$fontFamily: $font-family-sans-serif;
+$fontSize: $font-size-base;
+$borderRadius: $border-radius;
+$disabledOpacity: 0.35;
+
+//Header
+$headerBorderWidth: $border-width;
+$headerBorderColor: $table-border-color;
+$headerBgColor: $table-head-bg;
+$headerTextColor: $body-color;
+$headerFontWeight: $font-weight-bold;
+$headerIconTextColor: $body-color;
+
+//Content
+$contentBorderWidth: $border-width;
+$contentBorderColor: $input-border-color;
+$contentBgColor: $body-bg;
+$contentTextColor: $body-color;
+
+//Default State
+$stateDefaultBorderWidth: $border-width;
+$stateDefaultBorderColor: $table-border-color;
+$stateDefaultBgColor: $body-bg;
+$stateDefaultTextColor: $body-color;
+
+//Active State
+$stateActiveBorderColor: darken($dropdown-link-active-bg, 15%);
+$stateActiveBgColor: $dropdown-link-active-bg;
+$stateActiveTextColor: $dropdown-link-active-color;
+
+//Highlight State
+$stateHighlightBorderColor: $alert-info-border;
+$stateHighlightBgColor: $alert-info-bg;
+$stateHighlightTextColor: $alert-info-text;
+
+//Focus State
+$stateFocusBorderColor: $input-border-focus;
+$stateFocusBgColor: $input-bg-focus;
+$stateFocusTextColor: $input-color-focus;
+
+//Error State
+$stateErrorBorderColor: $alert-danger-border;
+$stateErrorBgColor: $alert-danger-bg;
+$stateErrorTextColor: $alert-danger-text;
+
+//Hover State
+$stateHoverBorderColor: darken($dropdown-link-hover-bg, 15%);
+$stateHoverBgColor: $dropdown-link-hover-bg;
+$stateHoverTextColor: $dropdown-link-hover-color;
+
+//Forms
+$inputBgColor: $input-bg;
+$inputTextColor: $input-color;
+$invalidInputBorderColor: $brand-danger;
+
+@import "primeng-theme-base";
